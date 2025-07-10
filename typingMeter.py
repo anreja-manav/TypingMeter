@@ -17,7 +17,7 @@ def speed_time(timeStart, timeEnd, userInput):
     # It will count speed of user
     time_delay = timeEnd - timeStart
     timeRound = round(time_delay, 2)  # it will roundoff the time delay 
-    speed = len(userInput) / timeRound
+    speed = len(userInput) / 5/timeRound
     return round(speed)  # It will roundoff the speed of user
 
 while True:
@@ -36,7 +36,7 @@ while True:
         testInput = input(" Enter : ")
         time_2 = time()
 
-        print("Speed : ", speed_time(time_1, time_2, testInput), "w/sec")
+        print("Speed : ", speed_time(time_1, time_2, testInput), "w/min")
         print("Error : ", mistake(test_1, testInput))
     elif ch == "no":
         print("Thank you")
