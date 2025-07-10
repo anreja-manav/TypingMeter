@@ -34,4 +34,4 @@ A simple command-line **Typing Speed Test** built using Python. Measures your ty
 
 2. Run the script:
     ```bash
-    python typing_test.py
+    python typingMeter.py
