@@ -13,11 +13,19 @@ def mistake(paraTest, userInput):
             error += 1
     return error
 
+def accuracy(paraTest, userInput):
+    correct = 0
+    for i in range(len(userInput)):
+        if i < len(paraTest) and paraTest[i] == userInput[i]:
+            correct += 1
+    return round(correct / len(paraTest) * 100, 2)
+
+
 def speed_time(timeStart, timeEnd, userInput):
     # It will count speed of user
     time_delay = timeEnd - timeStart
     timeRound = round(time_delay, 2)  # it will roundoff the time delay 
-    speed = len(userInput) / 5/timeRound
+    speed = ((len(userInput) / 5) / timeRound) * 60
     return round(speed)  # It will roundoff the speed of user
 
 while True:
@@ -38,6 +46,7 @@ while True:
 
         print("Speed : ", speed_time(time_1, time_2, testInput), "w/min")
         print("Error : ", mistake(test_1, testInput))
+        print("Accuracy : ", accuracy(test_1, testInput), "%")
     elif ch == "no":
         print("Thank you")
         break
